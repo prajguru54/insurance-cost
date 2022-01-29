@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Insurance Cost Estimator</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Insurance Cost predictor</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+           
+            
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+      
+    <div class="container my-4">
+        <form action="/" method="POST">
+            <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">Age</label>
+                <input type="text" class="form-control" name = "age" id="validationCustom01" value=""  required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label">Gender</label>
+              <select class="form-select" name = "gender" id="validationCustom02" required>
+                <option selected disabled value="">Select</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a Gender.
+              </div>
+          </div>
+          
+          <div class="col-md-4">
+              <label for="validationCustom03" class="form-label">BMI</label>
+              <input type="text" class="form-control" name = "bmi" id="validationCustom03" value="" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+          </div>
+          <pre>Don't know your BMI?? <a href="https://www.calculatorsoup.com/calculators/health/bmi-calculator.php" target="_blank" >click here</a> </pre> 
+            <div class="col-md-4">
+              <label for="validationCustom04" class="form-label">No. of Children</label>
+              <select class="form-select" name = "children" id="validationCustom04" required>
+                <option selected disabled value="">Select</option>
+                <option value="0">Zero</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="4">Four</option>
+                <option value="5">Five</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select no. of Children
+              </div>
+            </div>
+           
+            <div class="col-md-4">
+              <label for="validationCustom05" class="form-label">Smoker?</label>
+              <select class="form-select" name = "smoker" id="validationCustom05" required>
+                <option selected disabled value="">Select</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select Smoker/Non Smoker
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom06" class="form-label">Region</label>
+              <select class="form-select" name = "region" id="validationCustom06" required>
+                <option selected disabled value="">Select</option>
+                  <option selected>Select</option>
+                  <option value="northeast">North</option>
+                  <option value="northwest">South</option>
+                  <option value="southeast">North-East</option>
+                  <option value="southwest">Middle</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a Region.
+              </div>
+            </div>
+            <button type="submit" class="btn btn-outline-primary btn-lg" data-toggle="tooltip" data-placement="bottom" title="Submit this to do">Predict</button>          
+        </form>
+
+        
+        <pre>    
+        
+    </div>    
+            
+   
+
+
+    <!-- Optional JavaScript; Select one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
