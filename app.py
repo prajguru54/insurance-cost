@@ -1,25 +1,16 @@
-from flask import Flask, request, url_for
+from flask import Flask, request, render_template
 import pickle
-from flask.templating import render_template
-import numpy as np
 import pandas as pd
 
 #Loading the model and the scaler
 model = pickle.load(open('xgb_model.pkl', 'rb'))
 scaler = pickle.load(open('scaler.pkl', 'rb'))
-y_pred = model.predict(np.array([[0.91087502, -0.0760177 , -0.07876719,  0.98959079, -0.5074631 ,
-        -0.56641788, -0.61132367,  1.76548098]]))
-print(y_pred)
-#Working as expected
+
 
 app = Flask(__name__)
 
-@app.route('/')
-def home():
-    return render_template('home.html')
 
-
-@app.route('/prediction', methods=['GET', 'POST'])
+@app.route('/', methods=['GET','POST'])
 def prediction():
     if request.method == 'POST':
         Age = int(request.form['age'])
@@ -28,8 +19,6 @@ def prediction():
         Children = request.form['children']
         Smoker = request.form['smoker']
         Region = request.form['region']
-
-        
 
         x_query = [[Age, Gender, BMI, Children, Smoker, Region]] 
         features = ['age', 'sex', 'bmi', 'children', 'smoker', 'region']
@@ -80,7 +69,7 @@ def prediction():
 
 
         #return render_template('result.html', age = Age, gender = Gender, bmi = BMI, children = Children, smoker = Smoker, region = Region)
-    return render_template('prediction.html')
+    return render_template('home.html')
 
 
 

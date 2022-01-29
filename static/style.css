@@ -1,8 +1,10 @@
 body {
-    justify-content: center;
-    background-color: aqua;
+    background-image: url("../static/doller.jpg");
 }
-
-.container {
-    justify-content: center;
+label {
+    color: whitesmoke;
+}
+h1 {
+    color: whitesmoke;
+    font-weight: bold;
 }
